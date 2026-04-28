@@ -94,7 +94,7 @@ Columnas con mayor número de valores faltantes:
 - `disbursed_time` anterior a `posted_time` en algunos registros (inconsistencia lógica en el ciclo del préstamo)
 
 #### Outliers
-- Valores extremos en `loan_amount`, `funded_amount`, `lender_count`
+- Valores extremos en `loan_amount`, `funded_amount`, `term_in_months`, `lender_count`
 - Visualizados mediante boxplots con escala logarítmica para cada variable numérica clave
 
 ---
@@ -127,9 +127,9 @@ Columnas con mayor número de valores faltantes:
 ---
 
 ### Normalización de texto
-- Eliminación de espacios extra (`strip`, regex`\s+`)
+- Eliminación de espacios extra
 - Estandarización de formato por columna:
-  - `country`, `sector`, `activity` → Title Case
+  - `activity`, `sector`, `country`, `region`,  → Title Case
   - `currency`, `country_code` → MAYÚSCULAS
   - `borrower_genders`, `repayment_interval` → minúsculas
   - `use` → eliminación de puntos finales + primera letra en mayúscula (capitalize)
